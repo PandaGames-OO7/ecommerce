@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from 'react-router-dom';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -11,7 +12,7 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
-import { increment, incrementAsync, selectCount } from "./productListSlice";
+import { increment, incrementAsync, selectCount } from "../productSlice";
 
 const products = [
   {
@@ -395,13 +396,13 @@ export default function ProductList() {
                               <div className="mt-4 flex justify-between">
                                 <div>
                                   <h3 className="text-sm text-gray-700">
-                                    <a href={product.href}>
+                                   <Link to='/product-detail'> <a href={product.href}>
                                       <span
                                         aria-hidden="true"
                                         className="absolute inset-0"
                                       />
                                       {product.name}
-                                    </a>
+                                    </a></Link>
                                   </h3>
                                   <p className="mt-1 text-sm text-gray-500">
                                     {product.color}
