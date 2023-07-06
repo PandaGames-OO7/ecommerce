@@ -44,7 +44,7 @@ function NavBar({ children }) {
                       <Link to="/">
                         <img
                           className="h-8 w-8"
-                          src=""
+                          src="/ecommerce.png"
                           alt="Your Company"
                         />
                       </Link>
@@ -98,7 +98,8 @@ function NavBar({ children }) {
                             <span className="sr-only">Open user menu</span>
                             <img
                               className="h-8 w-8 rounded-full"
-                              src={user.imageUrl}
+                              // src={user.imageUrl}
+                              src = '/avatar.jpeg'
                               alt=""
                             />
                           </Menu.Button>
@@ -183,6 +184,7 @@ function NavBar({ children }) {
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
+                        {/* this should come from userInfo */}
                         {user.name}
                       </div>
                       <div className="text-sm font-medium leading-none text-gray-400">
